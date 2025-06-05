@@ -1,4 +1,4 @@
-module github.com/aws/rolesanywhere-credential-helper
+module github.com/slashid/rolesanywhere-credential-helper
 
 go 1.23.0
 
@@ -7,6 +7,7 @@ toolchain go1.23.7
 require (
 	github.com/aws/aws-sdk-go-v2 v1.36.1
 	github.com/aws/aws-sdk-go-v2/config v1.29.6
+	github.com/aws/rolesanywhere-credential-helper v1.7.0
 	github.com/aws/smithy-go v1.22.2
 	github.com/google/go-tpm v0.3.3
 	github.com/miekg/pkcs11 v1.1.1
@@ -32,3 +33,7 @@ require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 )
+
+replace github.com/google/go-tpm v0.3.3 => github.com/slashid/go-tpm v0.3.4
+
+replace ./github.com/aws/rolesanywhere-credential-helper => ./github.com/slashid/rolesanywhere-credential-helper
